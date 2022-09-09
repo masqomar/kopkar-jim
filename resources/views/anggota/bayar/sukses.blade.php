@@ -1,0 +1,1 @@
+sukses <a href="{{route('home')}}">back</a>
