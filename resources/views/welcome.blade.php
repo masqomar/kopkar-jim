@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>JIM Mart</title>
 
     <meta name="title" content="Restawrant — Harga Kaki Lima Rasa Kaki Lima!">
     <meta name="description" content="  Restawrant adalah restoran yang menyediakan berbagai macam kategori makanan mulai dari minuman,
@@ -39,7 +39,7 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
-                        🍣 Restawrant
+                        🍣 JIM INN
                     </h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -100,11 +100,8 @@
                     <a class="nav-link link-dark text-grey px-2 no-effect-hover">|</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://wa.me/+628123456789" class="nav-link link-dark text-grey px-2" target="_blank">
-                        +628123456789</a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://wa.me/+628987654321" target="_blank" class="nav-link link-dark text-grey px-2">+628987654321</a>
+                    <a href="https://wa.me/+6285790702476" class="nav-link link-dark text-grey px-2" target="_blank">
+                        +6285790702476</a>
                 </li>
             </ul>
         </div>
@@ -113,10 +110,9 @@
     <header class="py-3 mb-4 border-bottom d-none d-sm-none d-md-none d-lg-block bg-white sticky-top">
         <div class="container d-flex flex-wrap justify-content-center">
             <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
-                <span class="fs-3 fw-bold">🍣 Restawrant</span>
+                <span class="fs-3 fw-bold">🍣 JIM Mart</span>
             </a>
-            <button class="btn btn-warning text-white me-2 px-5 fw-500" onclick="location.href='http://127.0.0.1:8000/reservation/step-one'" type="button"> <i class="fas fa-calendar-plus"></i> &nbsp; &nbsp; Buat
-                Reservasi</button>
+            <button class="btn btn-warning text-white me-2 px-5 fw-500" onclick="location.href='{{route('login')}}'" type="button"> <i class="fas fa-key"></i> &nbsp; &nbsp;Login</button>
         </div>
     </header>
 
@@ -128,21 +124,21 @@
                 <ul class="splide__list">
                     <li class="splide__slide">
                         <a href="{{ url('/menus') }}">
-                            <img src="{{ url('images/splide/landing-page/hero-slide-1.png') }}" class="d-block w-100" style="border-radius:8px;">
+                            <img src="{{ url('theme/slider-1.png') }}" class="d-block w-100" style="border-radius:8px;">
                         </a>
                     </li>
                     <li class="splide__slide">
                         <a href="{{ url('/reservation/step-one') }}">
-                            <img src=" {{ url('images/splide/landing-page/hero-slide-2.png') }}" class="d-block w-100" style="border-radius:8px;">
+                            <img src=" {{ url('theme/slider-2.png') }}" class="d-block w-100" style="border-radius:8px;">
                         </a>
                     </li>
                     <li class="splide__slide">
                         <a href="{{ url('/reservation/step-one') }}">
-                            <img src="{{ url('images/splide/landing-page/hero-slide-3.png') }}" class="d-block w-100" style="border-radius:8px;">
+                            <img src="{{ url('theme/slider-3.png') }}" class="d-block w-100" style="border-radius:8px;">
                         </a>
                     </li>
                     <li class="splide__slide">
-                        <img src="{{ url('images/splide/landing-page/hero-slide-4.png') }}" class="d-block w-100" style="border-radius:8px;">
+                        <img src="{{ url('theme/slider-4.png') }}" class="d-block w-100" style="border-radius:8px;">
                     </li>
                 </ul>
             </div>
@@ -153,22 +149,22 @@
             <div class="container py-2">
                 <div class="row">
                     <div class="col-lg-2 col-md-4 col-6">
-                        <a href="#"><img src="{{ url('images/logo/1.png') }}" class="img-fluid" alt="Bluehost logo" /></a>
+                        <a href="#"><img src="{{ url('theme/logo/1.png') }}" class="img-fluid" alt="Bluehost logo" /></a>
                     </div>
                     <div class="col-lg-2 col-md-4 col-6">
-                        <a href="#"><img src="{{ url('images/logo/2.png') }}" class="img-fluid" alt="Hostgator logo" /></a>
+                        <a href="#"><img src="{{ url('theme/logo/2.png') }}" class="img-fluid" alt="Hostgator logo" /></a>
                     </div>
                     <div class="col-lg-2 col-md-4 col-6">
-                        <a href="#"><img src="{{ url('images/logo/3.png') }}" class="img-fluid" alt="Green Geeks logo" /></a>
+                        <a href="#"><img src="{{ url('theme/logo/3.png') }}" class="img-fluid" alt="Green Geeks logo" /></a>
                     </div>
                     <div class="col-lg-2 col-md-4 col-6">
-                        <a href="#"><img src="{{ url('images/logo/4.png') }}" class="img-fluid" alt="WordPress logo" /></a>
+                        <a href="#"><img src="{{ url('theme/logo/lc_mini.png') }}" class="img-fluid" alt="lc mini logo" /></a>
                     </div>
                     <div class="col-lg-2 col-md-4 col-6">
-                        <a href="#"><img src="{{ url('images/logo/5.png') }}" class="img-fluid" alt="DreamHost logo" /></a>
+                        <a href="#"><img src="{{ url('theme/logo/jim.png') }}" class="img-fluid" alt="jim logo" /></a>
                     </div>
                     <div class="col-lg-2 col-md-4 col-6">
-                        <a href="#"><img src="{{ url('images/logo/6.png') }}" class="img-fluid" alt="Hostinger logo" /></a>
+                        <a href="#"><img src="{{ url('theme/logo/lc.png') }}" class="img-fluid" alt="LC logo" /></a>
                     </div>
                 </div>
             </div>

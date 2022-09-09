@@ -18,4 +18,9 @@ class AnggotaTopup extends Model
         'tgl_topup',
         'keterangan'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

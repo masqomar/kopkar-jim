@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\ProdukKoperasiController;
 use App\Http\Controllers\Admin\SimpananSukarelaController;
 use App\Http\Controllers\Admin\SimpananWajibController;
+use App\Http\Controllers\Admin\TopUpAnggotaController;
 use App\Http\Controllers\Anggota\BayarController;
 use App\Http\Controllers\Anggota\PembiayaanController;
 use App\Http\Controllers\Anggota\RiwayatTransaksiController;
@@ -53,6 +54,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('kas-masuk', KasMasukController::class);
     Route::resource('kas-keluar', KasKeluarController::class);
     Route::resource('pembiayaan', PembiayaanAnggotaController::class);
+    Route::resource('topup-anggota', TopUpAnggotaController::class);
     Route::resource('gallery', GalleryController::class);
 
     Route::get('simpanan-wajib', [SimpananWajibController::class, 'index'])->name('admin.simpanan-wajib.index');
@@ -109,4 +111,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     //All
     Route::get('profil', [ProfilController::class, 'index'])->name('profil.index');
+
+
+    //Front
 });

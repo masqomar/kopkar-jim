@@ -28,14 +28,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($jenisProduk as $key => $jenis)
+                        @foreach($gallery as $key => $galery)
                         <tr>
                             <td>{{$key+1}}</td>
-                            <td>{{$jenis->jenis_produk}}</td>
-                            <td>{{$jenis->desk_jenis}}</td>
+                            <td>
+                                <img src="{{ \Storage::url($galery->foto_gallery) }}" class="rounded" style="width: 150px">
+                            </td>
+                            <td>{{$galery->judul_gallery}}</td>
+                            <td>{{$galery->caption_gallery}}</td>
                             <td>@can('gallery-edit')
-                                <a href="{{route('gallery.edit', $jenis)}}" class="btn btn-primary btn-xs">
+                                <a href="{{route('gallery.edit', $galery)}}" class="btn btn-primary btn-xs">
                                     Edit
+                                </a>
+                                @endcan
+                                @can('gallery-delete')
+                                <a href="{{route('gallery.destroy', $galery)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-danger btn-xs">
+                                    Delete
                                 </a>
                                 @endcan
                             </td>
@@ -51,9 +59,21 @@
 @stop
 
 @push('js')
+<form action="" id="delete-form" method="post">
+    @method('delete')
+    @csrf
+</form>
 <script>
     $('#example2').DataTable({
         "responsive": true,
     });
+
+    function notificationBeforeDelete(event, el) {
+        event.preventDefault();
+        if (confirm('Apakah anda yakin akan menghapus data ? ')) {
+            $("#delete-form").attr('action', $(el).attr('href'));
+            $("#delete-form").submit();
+        }
+    }
 </script>
 @endpush

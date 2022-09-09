@@ -341,24 +341,41 @@ return [
             'submenu' => [
                 [
                     'text' => 'Jenis Akun',
-                    'icon_color' => 'indigo',
+                    'icon'    => 'fas fa-fw fa-share',
                     'url'  => '/kode-akun',
                 ],
                 [
-                    'text' => 'Kas Masuk',
-                    'icon_color' => 'fuchsia',
-                    'url'  => '/kas-masuk',
+                    'text'    => 'Kas Koperasi',
+                    'url'     => '#',
+                    'icon'    => 'fas fa-fw fa-share',
+                    'submenu' => [
+                        [
+                            'text' => 'Kas Masuk',
+                            'icon_color' => 'fuchsia',
+                            'url'  => '/kas-masuk',
+                        ],
+                        [
+                            'text' => 'Kas Keluar',
+                            'icon_color' => 'red',
+                            'url'  => '/kas-keluar',
+                        ],
+                    ],
                 ],
                 [
-                    'text' => 'Kas Keluar',
-                    'icon_color' => 'red',
-                    'url'  => '/kas-keluar',
+                    'text' => 'Topup Anggota',
+                    'icon'    => 'fas fa-fw fa-share',
+                    'url'  => '/topup-anggota',
                 ],
             ],
         ],
         [
             'text'    => 'Pembiayaan',
             'url'     => '/pembiayaan',
+            'icon'    => 'fas fa-fw fa-share',
+        ],
+        [
+            'text'    => 'Gallery',
+            'url'     => '/gallery',
             'icon'    => 'fas fa-fw fa-share',
         ],
 
@@ -383,61 +400,6 @@ return [
             'text'    => 'Profil',
             'url'     => '/profil',
             'icon'    => 'fas fa-fw fa-share',
-        ],
-
-        ['header' => 'labels'],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
         ],
     ],
 
