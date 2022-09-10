@@ -77,7 +77,7 @@
 
     <div id="app">
         <div class="overlay">
-            <a href="qr.php" class="btn btn-primary btn-lg qrbutton "><i class="fas fa-qrcode"></i> Kode QRmu</a>
+            <a href="#" class="btn btn-primary btn-lg qrbutton "><i class="fas fa-qrcode"></i> Kode QRmu</a>
         </div>
         <qrcode-stream @decode="onDecode" :track="repaint" @init="onInit"></qrcode-stream>
     </div>

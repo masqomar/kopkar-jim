@@ -5,15 +5,17 @@ Bayar Pembelian
 @endsection
 
 @section ('content')
+<br>
 <div class="container">
     <div class="card">
         <div class="card-body">
-            <h6 class="text-center"> Bayar ke!
-                @foreach($anggota as $detailAnggota)
+            <h6 class="text-center">
+                @forelse($anggota as $detailAnggota)
+                Bayar ke!
                 <h6 class="text-center text-info"><strong>{{$detailAnggota->nama}}<br />
                         {{$detailAnggota->no_anggota}}</strong>
                 </h6>
-                @endforeach
+
             </h6>
             <br />
             <form action="{{ route('anggota.bayar.store') }}" method="POST">
@@ -34,7 +36,7 @@ Bayar Pembelian
                         <div class="media-inner">
                             <h6 class="text-center">
                                 <small>Saldo Kamu</small><br />
-                                <small><b>Rp. {{Auth::user()->saldo}}</b></small>
+                                <small><b>@rupiah(Auth::user()->saldo)</b></small>
                             </h6>
                         </div>
                     </div>
@@ -43,6 +45,22 @@ Bayar Pembelian
                     <input type="submit" class="btn btn-primary w-100 d-flex align-items-center justify-content-center" value="Bayar">
                 </div>
             </form>
+            @empty
+            <div class="alert alert-warning">
+                <div class="media">
+                    <div class="icon icon-40 bg-white text-success mr-2 rounded-circle"></div>
+                    <div class="media-inner">
+                        <h1 class="text-center">
+                            <small>Kode QR tidak ditemukan</small>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group basic">
+                <a href="{{route('anggota.bayar.index')}}" class="btn btn-warning w-100 d-flex align-items-center justify-content-center">Scan Ulang</a>
+            </div>
+            @endforelse
+
         </div>
     </div>
 </div>

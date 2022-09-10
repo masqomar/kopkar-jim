@@ -31,9 +31,10 @@ class BayarController extends Controller
         // dd($merchant);
         if ($merchant) {
             return view('anggota.bayar.cari', ['anggota' => $merchant]);
+        } else {
+            return redirect()->route('home')
+                ->with('error', 'Tidak menemukan data merchant');
         }
-        return redirect()->route('home')
-            ->with('error', 'Tidak menemukan data merchant');
     }
 
     public function store(Request $request)
