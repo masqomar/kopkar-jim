@@ -36,8 +36,8 @@ class GalleryController extends Controller
             'foto_gallery' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
-        $image = $request->file('foto_gallery');
-        $foto_gallery = $image->storeAs('public/foto_gallery', $image->hashName());
+        $foto_gallery = time() . '.' . $request->foto_gallery->hashName();
+        $request->foto_gallery->move(public_path('images'), $foto_gallery);
 
         Gallery::create([
             'judul_gallery' => $request->judul_gallery,

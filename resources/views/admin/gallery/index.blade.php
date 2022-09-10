@@ -32,7 +32,7 @@
                         <tr>
                             <td>{{$key+1}}</td>
                             <td>
-                                <img src="{{ \Storage::url($galery->foto_gallery) }}" class="rounded" style="width: 150px">
+                                <img src="{{ asset('/images/'.$galery->foto_gallery) }}" alt="JIM gallery" class="rounded" style="width: 150px">
                             </td>
                             <td>{{$galery->judul_gallery}}</td>
                             <td>{{$galery->caption_gallery}}</td>
